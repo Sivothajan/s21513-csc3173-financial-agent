@@ -1,0 +1,270 @@
+{
+  "Q1": {
+    "question": "How did the company's total revenue change between 2023 and 2025?",
+    "project_repository": "https://github.com/Sivothajan/s21513-csc3173-financial-agent",
+    "intent": "compare",
+    "answer": "Total net sales increased from $383.285 billion in 2023 to $416.161 billion in 2025, a change of $32.876 billion (8.58%).",
+    "calculations": {
+      "old_year": 2023,
+      "new_year": 2025,
+      "old": 383285,
+      "new": 416161,
+      "absolute_change": 32876,
+      "percentage_change": "8.58"
+    },
+    "retrieved_records": [
+      {
+        "year": 2023,
+        "dimension": "category",
+        "label": "Total net sales",
+        "value_usd_millions": 383285,
+        "filename": "Apple_2023_10K.pdf",
+        "pdf_page": 25,
+        "report_page": 22
+      },
+      {
+        "year": 2025,
+        "dimension": "category",
+        "label": "Total net sales",
+        "value_usd_millions": 416161,
+        "filename": "Apple_2025_10K.pdf",
+        "pdf_page": 26,
+        "report_page": 23
+      }
+    ],
+    "semantic_matches": [
+      {
+        "year": 2025,
+        "pdf_page": 39,
+        "filename": "Apple_2025_10K.pdf",
+        "score": 0.6776,
+        "snippet": "The following table shows disaggregated net sales, as well as the portion of total net sales that was previously deferred, for  2025, 2024 and 2023 (in millions): 2025 2024 2023 iPhone $  209,586  $  201,183  $  200,583  Mac   33,708    29,984    29,357  iPad   28,023    26,694    28,300  Wearables, Home and Accessories   35,686    37,005    39,845"
+      },
+      {
+        "year": 2024,
+        "pdf_page": 38,
+        "filename": "Apple_2024_10K.pdf",
+        "score": 0.6744,
+        "snippet": "Accessories   37,005    39,845    41,241  Services (1)   96,169    85,200    78,129  Total net sales $  391,035  $  383,285  $  394,328  (1) Services net sales include amortization of the deferred value of services bundled in the sales price of certain products. Total net sales include $7.7 billion of revenue recognized in 2024 that was included in"
+      },
+      {
+        "year": 2025,
+        "pdf_page": 51,
+        "filename": "Apple_2025_10K.pdf",
+        "score": 0.6334,
+        "snippet": "The following tables show net sales for 2025, 2024 and 2023 and long-lived assets as of September\u00a0 27, 2025 and  September\u00a028, 2024 for countries that individually accounted for 10% or more of the respective totals, as well as aggregate  amounts for the remaining countries (in millions): 2025 2024 2023 Net sales: U.S. $  151,790  $  142,196  $  138"
+      },
+      {
+        "year": 2023,
+        "pdf_page": 38,
+        "filename": "Apple_2023_10K.pdf",
+        "score": 0.6079,
+        "snippet": "Net sales disaggregated by significant products and services for 2023, 2022 and 2021 were as follows (in millions): 2023 2022 2021 iPhone (1) $  200,583  $  205,489  $  191,973  Mac (1)   29,357    40,177    35,190  iPad (1)   28,300    29,292    31,862  Wearables, Home and Accessories (1)   39,845    41,241    38,367  Services (2)   85,200    78,1"
+      },
+      {
+        "year": 2024,
+        "pdf_page": 50,
+        "filename": "Apple_2024_10K.pdf",
+        "score": 0.5873,
+        "snippet": "onrecurring charges, and other separately managed  costs. The following tables show net sales for 2024, 2023 and 2022 and long-lived assets as of September\u00a0 28, 2024 and  September\u00a030, 2023 for countries that individually accounted for 10% or more of the respective totals, as well as aggregate  amounts for the remaining countries (in millions): 202"
+      }
+    ],
+    "agent_trace": [
+      "Step 1: planner -> RETRIEVE",
+      "Step 2: planner -> CALCULATE",
+      "Step 3: planner -> REPORT",
+      "Step 4: planner -> FINISH"
+    ]
+  },
+  "Q2": {
+    "question": "Which product category contributed the most revenue in the latest year?",
+    "project_repository": "https://github.com/Sivothajan/s21513-csc3173-financial-agent",
+    "intent": "ranking",
+    "answer": "The largest product category in fiscal 2025 was iPhone, with $209.586 billion in net sales (50.36% of Apple's $416.161 billion total net sales). Services is excluded from the physical-product ranking.",
+    "calculations": {
+      "year": 2025,
+      "winner": "iPhone",
+      "winner_revenue": 209586,
+      "total": 416161,
+      "share": "50.36"
+    },
+    "retrieved_records": [
+      {
+        "year": 2025,
+        "dimension": "category",
+        "label": "iPhone",
+        "value_usd_millions": 209586,
+        "filename": "Apple_2025_10K.pdf",
+        "pdf_page": 26,
+        "report_page": 23
+      },
+      {
+        "year": 2025,
+        "dimension": "category",
+        "label": "Wearables, Home and Accessories",
+        "value_usd_millions": 35686,
+        "filename": "Apple_2025_10K.pdf",
+        "pdf_page": 26,
+        "report_page": 23
+      },
+      {
+        "year": 2025,
+        "dimension": "category",
+        "label": "Mac",
+        "value_usd_millions": 33708,
+        "filename": "Apple_2025_10K.pdf",
+        "pdf_page": 26,
+        "report_page": 23
+      },
+      {
+        "year": 2025,
+        "dimension": "category",
+        "label": "iPad",
+        "value_usd_millions": 28023,
+        "filename": "Apple_2025_10K.pdf",
+        "pdf_page": 26,
+        "report_page": 23
+      },
+      {
+        "year": 2025,
+        "dimension": "category",
+        "label": "Total net sales",
+        "value_usd_millions": 416161,
+        "filename": "Apple_2025_10K.pdf",
+        "pdf_page": 26,
+        "report_page": 23
+      }
+    ],
+    "semantic_matches": [
+      {
+        "year": 2025,
+        "pdf_page": 38,
+        "filename": "Apple_2025_10K.pdf",
+        "score": 0.6046,
+        "snippet": "timated period they are expected to be provided. For certain long-term service arrangements, the Company has performance obligations for services it has not yet delivered. For  these arrangements, the Company does not have a right to bill for the undelivered services. The Company has determined that  any unbilled consideration relates entirely to t"
+      },
+      {
+        "year": 2023,
+        "pdf_page": 37,
+        "filename": "Apple_2023_10K.pdf",
+        "score": 0.5866,
+        "snippet": "have a right to bill for the undelivered services. The Company has determined that  any unbilled consideration relates entirely to the value of the undelivered services. Accordingly, the Company has not recognized  revenue, and does not disclose amounts, related to these undelivered services. For the sale of third-party products where the Company o"
+      },
+      {
+        "year": 2024,
+        "pdf_page": 38,
+        "filename": "Apple_2024_10K.pdf",
+        "score": 0.5864,
+        "snippet": "d does not disclose amounts, related to these undelivered services. For the sale of third-party products where the Company obtains control of the product before transferring it to the customer, the  Company recognizes revenue based on the gross amount billed to customers. The Company considers multiple factors when  determining whether it obtains c"
+      },
+      {
+        "year": 2023,
+        "pdf_page": 37,
+        "filename": "Apple_2023_10K.pdf",
+        "score": 0.5729,
+        "snippet": "Note 2 \u2013 Revenue The Company recognizes revenue at the amount to which it expects to be entitled when control of the products or services is  transferred to its customers. Control is generally transferred when the Company has a present right to payment and title and the  significant risks and rewards of ownership of products or services are transfe"
+      },
+      {
+        "year": 2024,
+        "pdf_page": 38,
+        "filename": "Apple_2024_10K.pdf",
+        "score": 0.5729,
+        "snippet": "Note 2 \u2013 Revenue The Company recognizes revenue at the amount to which it expects to be entitled when control of the products or services is  transferred to its customers. Control is generally transferred when the Company has a present right to payment and title and the  significant risks and rewards of ownership of products or services are transfe"
+      }
+    ],
+    "agent_trace": [
+      "Step 1: planner -> RETRIEVE",
+      "Step 2: planner -> CALCULATE",
+      "Step 3: planner -> REPORT",
+      "Step 4: planner -> FINISH"
+    ]
+  },
+  "Q3": {
+    "question": "How did Services revenue change from 2023 to 2025, and what share of 2025 total net sales did Services represent?",
+    "project_repository": "https://github.com/Sivothajan/s21513-csc3173-financial-agent",
+    "intent": "compare_and_share",
+    "answer": "Services increased from $85.200 billion in 2023 to $109.158 billion in 2025, a change of $23.958 billion (28.12%). In 2025, Services represented 26.23% of total net sales ($416.161 billion).",
+    "calculations": {
+      "old_year": 2023,
+      "new_year": 2025,
+      "old": 85200,
+      "new": 109158,
+      "absolute_change": 23958,
+      "percentage_change": "28.12",
+      "share_of_new_year_total": "26.23",
+      "new_year_total": 416161
+    },
+    "retrieved_records": [
+      {
+        "year": 2023,
+        "dimension": "category",
+        "label": "Services",
+        "value_usd_millions": 85200,
+        "filename": "Apple_2023_10K.pdf",
+        "pdf_page": 25,
+        "report_page": 22
+      },
+      {
+        "year": 2025,
+        "dimension": "category",
+        "label": "Services",
+        "value_usd_millions": 109158,
+        "filename": "Apple_2025_10K.pdf",
+        "pdf_page": 26,
+        "report_page": 23
+      },
+      {
+        "year": 2025,
+        "dimension": "category",
+        "label": "Total net sales",
+        "value_usd_millions": 416161,
+        "filename": "Apple_2025_10K.pdf",
+        "pdf_page": 26,
+        "report_page": 23
+      }
+    ],
+    "semantic_matches": [
+      {
+        "year": 2024,
+        "pdf_page": 38,
+        "filename": "Apple_2024_10K.pdf",
+        "score": 0.8081,
+        "snippet": "Accessories   37,005    39,845    41,241  Services (1)   96,169    85,200    78,129  Total net sales $  391,035  $  383,285  $  394,328  (1) Services net sales include amortization of the deferred value of services bundled in the sales price of certain products. Total net sales include $7.7 billion of revenue recognized in 2024 that was included in"
+      },
+      {
+        "year": 2025,
+        "pdf_page": 39,
+        "filename": "Apple_2025_10K.pdf",
+        "score": 0.7816,
+        "snippet": "The following table shows disaggregated net sales, as well as the portion of total net sales that was previously deferred, for  2025, 2024 and 2023 (in millions): 2025 2024 2023 iPhone $  209,586  $  201,183  $  200,583  Mac   33,708    29,984    29,357  iPad   28,023    26,694    28,300  Wearables, Home and Accessories   35,686    37,005    39,845"
+      },
+      {
+        "year": 2023,
+        "pdf_page": 38,
+        "filename": "Apple_2023_10K.pdf",
+        "score": 0.7604,
+        "snippet": "Net sales disaggregated by significant products and services for 2023, 2022 and 2021 were as follows (in millions): 2023 2022 2021 iPhone (1) $  200,583  $  205,489  $  191,973  Mac (1)   29,357    40,177    35,190  iPad (1)   28,300    29,292    31,862  Wearables, Home and Accessories (1)   39,845    41,241    38,367  Services (2)   85,200    78,1"
+      },
+      {
+        "year": 2025,
+        "pdf_page": 38,
+        "filename": "Apple_2025_10K.pdf",
+        "score": 0.759,
+        "snippet": "it to the  customer. Therefore, the Company accounts for all third-party application\u2013related sales on a net basis by recognizing in Services  net sales only the commission it retains. Apple Inc. | 2025 Form 10-K | 35"
+      },
+      {
+        "year": 2025,
+        "pdf_page": 26,
+        "filename": "Apple_2025_10K.pdf",
+        "score": 0.7589,
+        "snippet": "due to lower net sales of  Accessories and Wearables. Services Services net sales increased during 2025 compared to 2024 primarily due to higher net sales from advertising, the App Store  and cloud services. Apple Inc. | 2025 Form 10-K | 23"
+      }
+    ],
+    "agent_trace": [
+      "Step 1: planner -> RETRIEVE",
+      "Step 2: planner -> CALCULATE",
+      "Step 3: planner -> REPORT",
+      "Step 4: planner -> FINISH"
+    ]
+  }
+}

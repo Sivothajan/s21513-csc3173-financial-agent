@@ -1,0 +1,7 @@
+PyMuPDF>=1.23
+scikit-learn>=1.4
+numpy>=1.24
+matplotlib>=3.8
+reportlab>=4.0
+mdformat>=1.0.0
+mdformat-gfm>=1.0.0
