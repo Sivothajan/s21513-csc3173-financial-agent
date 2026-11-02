@@ -143,6 +143,8 @@ Each run writes the following files to [`reports/`](reports/) and replaces previ
 
 Each Markdown report is automatically formatted with [mdformat](https://mdformat.readthedocs.io/en/stable/users/installation_and_usage.html) and GitHub-flavored Markdown support immediately after it is written. This keeps table alignment and Markdown spacing consistent on every run, in both the notebook and the Python script.
 
+Generated PDF reports include document properties for the title, author, subject, keywords and report-generating application.
+
 ## Expected Results
 
 | Question                                      | Expected result                                                                                                                                    |

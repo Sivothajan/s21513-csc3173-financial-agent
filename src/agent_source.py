@@ -826,6 +826,17 @@ def write_pdf(states: list[AgentState], output: Path, charts: list[Path] | None 
         rightMargin=42,
         topMargin=35,
         bottomMargin=35,
+        title=f"CSC3173 Apple Financial Analysis - {output.stem}",
+        author="Sivothayan Sivasiva",
+        subject="CSC3173 Programming Assignment 02: Apple 10-K financial analysis",
+        keywords=[
+            "CSC3173",
+            INDEX_NUMBER,
+            "Apple",
+            "Financial Analysis",
+            "Form 10-K",
+        ],
+        creator="Financial Document Analysis Agent (ReportLab)",
     )
     doc.build(story, onFirstPage=draw_page_number, onLaterPages=draw_page_number)
 
